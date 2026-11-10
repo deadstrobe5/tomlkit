@@ -5,6 +5,7 @@
 ### Changed
 
 - Speed up repeated array appends by keeping existing indexes instead of rebuilding them.
+- Speed up deleting array items with `del`, `pop()` and `remove()`, and adding lines with `Array.add_line()`: only the affected indexes are updated instead of rebuilding them all, so emptying a long array with `pop()` or building one line by line is no longer quadratic.
 
 ### Fixed
 
